@@ -9,10 +9,10 @@
     <script>AFRAME.registerComponent('phase-shift', {
     init: function () {
       var el = this.el
-        el.addEventListener('gripdown', function () {
+        el.addEventListener('driggerdown', function () {
           el.setAttribute('collision-filter', {collisionForces: true})
         })
-        el.addEventListener('gripup', function () {
+        el.addEventListener('driggerup', function () {
           el.setAttribute('collision-filter', {collisionForces: false})
         })
       }
