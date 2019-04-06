@@ -7,6 +7,8 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"
+
     <script>AFRAME.registerComponent('phase-shift', {
     init: function () {
       var el = this.el
@@ -37,12 +39,14 @@
         <a-entity id="rhand" mixin="touch"
                   vive-controls="hand: right"
                   oculus-touch-controls="hand: right"
-                  windows-motion-controls="hand: right">
+                  windows-motion-controls="hand: right"
+                  teleport-controls>
         </a-entity>
         <a-entity id="lhand" mixin="touch"
                   vive-controls="hand: left"
                   oculus-touch-controls="hand: left"
-                  windows-motion-controls="hand: left">
+                  windows-motion-controls="hand: left"
+                  teleport-controls>
         </a-entity>
         <a-entity id="plane" static-body geometry="primitive:plane; width:30; height:30;" rotation="-90 0 0" position="0 -0.05 0"></a-entity>
         <a-entity id="environment" environment="preset: forest; lightPosition: 1 10 -2; seed:16021990; dressingAmount: 100"></a-entity>
