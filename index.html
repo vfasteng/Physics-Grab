@@ -2,18 +2,18 @@
   <head>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
-    <script src="//unpkg.com/aframe-leap-hands/dist/aframe-leap-hands.umd.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
-    
+    <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
     <script>AFRAME.registerComponent('phase-shift', {
     init: function () {
       var el = this.el
-        el.addEventListener('driggerdown', function () {
+        el.addEventListener('gripdown', function () {
           el.setAttribute('collision-filter', {collisionForces: true})
         })
-        el.addEventListener('driggerup', function () {
+        el.addEventListener('gripup', function () {
           el.setAttribute('collision-filter', {collisionForces: false})
         })
       }
